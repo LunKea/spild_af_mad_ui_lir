@@ -1,15 +1,53 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Link from "../components/Link.astro";
-import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
+// import { Image } from "astro:assets";
+// import thumbsup from "../assets/images/thumbsup.png";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
 import Button from "../components/Button.astro";
 ---
+
 <MainLayout title="Titel">
 	<main class="container mx-auto p-4">
-		<Heading htmlheading="h1">Lav noget flot!</Heading>
-        <Text teksttype="brødtekst">Så bliver Anders glad:-)</Text>
+
+		<div class="mb-250">
+			<p>Hej</p>
+		</div>
+
+		<section class="">
+			<h1> Køb in med omtanke </h1>
+
+			<p>I gennemsnittet ender vi med at smide  25% af maden vi køber ud.</p>
+			<p>Det vil svare til at hver fjerede indkøbsvogn man ser i supermarkedet bliver smidt ud.</p>
+
+			<div class="staggeranimation flex flex-row gap-10" id="stagger">
+				<img src="/src/assets/images/cart.png" alt="">
+				<img src="/src/assets/images/cart.png" alt="">
+				<img src="/src/assets/images/cart.png" alt="">
+				<img src="/src/assets/images/cart.png" alt="" class="grayscale">
+			</div>
+
+		</section>
+
+
+		
+<script>
+import { animate, stagger, inView, scroll } from "motion";
+	inView( "#stagger" , () =>{
+		animate(
+		".staggeranimation img",
+		{ opacity: [0, 1] },
+		{ 
+			delay: stagger(0.5, { startDelay: 0.5 },	
+			 )
+			
+		}
+		);
+	})
+
+	
+
+</script>
 	</main>
 </MainLayout>

@@ -43,7 +43,7 @@ import Button from "../components/Button.astro";
 						<li class="li8" id="li8"><h1>2015</h1></li>
 					</ul>
 
-					<div class="flex flex-row">
+					<div class="flex flex-row li1_content">
 						<img src="/src/assets/images/cart.png" alt="">
 						<div class="flex flex-col gap-10">
 							<h1>Begyndelsen</h1>
@@ -69,13 +69,35 @@ import Button from "../components/Button.astro";
 					font-size: 4rem;
 				}
 
-					ul::-webkit-scrollbar {
+				ul::-webkit-scrollbar{
 					display: none;}
+				
+				li{
+					cursor: pointer;
+				}
 
 			</style>
 
 		
 <script>
+	const list1 = document.getElementById("li1");
+	const list2 = document.getElementById("li2");
+	const list3 = document.getElementById("li3");
+	const list4 = document.getElementById("li4");
+	const list5 = document.getElementById("li5");
+	const list6 = document.getElementById("li6");
+	const list7 = document.getElementById("li7");
+	const list8 = document.getElementById("li8");
+	
+	const list1box = document.getElementsByClassName("li1_content");
+	const list2box = document.getElementsByClassName("li2_content");
+	const list3box = document.getElementsByClassName("li3_content");
+	const list4box = document.getElementsByClassName("li4_content");
+	const list5box = document.getElementsByClassName("li5_content");
+	const list6box = document.getElementsByClassName("li_6content");
+	const list7box = document.getElementsByClassName("li_7content");
+	const list8box = document.getElementsByClassName("li_8content");
+
 import { animate, stagger, inView, scroll } from "motion";
 	inView( "#stagger" , () =>{
 		animate(
@@ -88,6 +110,7 @@ import { animate, stagger, inView, scroll } from "motion";
 		}
 		);
 	})
+
 
 	
 

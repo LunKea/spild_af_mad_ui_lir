@@ -32,27 +32,35 @@ import Button from "../components/Button.astro";
 
 			<section class="max-h-150 bg-blue-100">
 				<div class="flex flex-row tidslinje max-h-100">
-					<ul class="overflow-y-scroll w-100">
-						<li><h1>2008</h1></li>
-						<li><h1>2009</h1></li>
-						<li><h1>2010</h1></li>
-						<li><h1>2011</h1></li>
-						<li><h1>2012</h1></li>
-						<li><h1>2013</h1></li>
-						<li><h1>2014</h1></li>
-						<li><h1>2015</h1></li>
+					<ul class="overflow-auto w-auto pr-25">
+						<li class="li1" id="li1"><h1>2008</h1></li>
+						<li class="li2" id="li2"><h1>2009</h1></li>
+						<li class="li3" id="li3"><h1>2010</h1></li>
+						<li class="li4" id="li4"><h1>2011</h1></li>
+						<li class="li5" id="li5"><h1>2012</h1></li>
+						<li class="li6" id="li6"><h1>2013</h1></li>
+						<li class="li7" id="li7"><h1>2014</h1></li>
+						<li class="li8" id="li8"><h1>2015</h1></li>
 					</ul>
 
 					<div class="flex flex-row">
-						
 						<img src="/src/assets/images/cart.png" alt="">
 						<div class="flex flex-col gap-10">
 							<h1>Begyndelsen</h1>
 							<p>Stop Spild Af Mad blev stiftet af Selina Juul i 2008 som en facebook gruppe, men voksede hurtigt til en anderkendt frivilligt og selvstændigt non-profit. 
 							Selina Juul var motiveret af hendes fortid i Moskva, hvor hun oplevede stor fødevaremangel. Da hun kom til Danmark tog hun derfor kampen op i mod madspild. </p>
 						</div>
-
 					</div>
+
+					<!-- <div class="flex flex-row">
+						<img src="/src/assets/images/cart.png" alt="">
+						<div class="flex flex-col gap-10">
+							<h1>Begyndelsen</h1>
+							<p>Stop Spild Af Mad blev stiftet af Selina Juul i 2008 som en facebook gruppe, men voksede hurtigt til en anderkendt frivilligt og selvstændigt non-profit. 
+							Selina Juul var motiveret af hendes fortid i Moskva, hvor hun oplevede stor fødevaremangel. Da hun kom til Danmark tog hun derfor kampen op i mod madspild. </p>
+						</div>
+					</div> -->
+
 				</div>
 			</section>
 
@@ -60,6 +68,10 @@ import Button from "../components/Button.astro";
 				h1{
 					font-size: 4rem;
 				}
+
+					ul::-webkit-scrollbar {
+					display: none;}
+
 			</style>
 
 		

@@ -33,7 +33,7 @@ import Button from "../components/Button.astro";
 			<section class="max-h-150 bg-blue-100">
 				<div class="flex flex-row tidslinje max-h-100">
 					<ul class="overflow-auto w-auto pr-25">
-						<li class="li1" id="li1"><h1>2008</h1></li>
+						<li class="li1 activeTime" id="li1"><h1>2008</h1></li>
 						<li class="li2" id="li2"><h1>2009</h1></li>
 						<li class="li3" id="li3"><h1>2010</h1></li>
 						<li class="li4" id="li4"><h1>2011</h1></li>
@@ -52,7 +52,7 @@ import Button from "../components/Button.astro";
 						</div>
 					</div>
 
-					<!-- <div class="flex flex-row">
+					<!-- <div class="flex flex-row inactiveBox">
 						<img src="/src/assets/images/cart.png" alt="">
 						<div class="flex flex-col gap-10">
 							<h1>Begyndelsen</h1>
@@ -65,12 +65,30 @@ import Button from "../components/Button.astro";
 			</section>
 
 			<style>
+
+				.activeTime{
+					color: red;
+
+				}
+
+				.activeBox{
+					display: block;
+				}
+
+				.inactiveBox{
+					display: none;
+				}
+
 				h1{
 					font-size: 4rem;
 				}
 
+
+
 				ul::-webkit-scrollbar{
-					display: none;}
+					display: none;
+					scroll-behavior: smooth;
+				}
 				
 				li{
 					cursor: pointer;

@@ -11,9 +11,22 @@ import Button from "../components/Button.astro";
 <MainLayout title="Titel">
 	<main class="container mx-auto p-4">
 
-		<div class="mb-250">
+		<div class="mb-50">
 			<p>Hej</p>
 		</div>
+
+		<section class="bananParallax mx-20 bg-amber-100 min-h-200">
+
+			<div class="overflow-hidden h-screen bg-amber-400 grid grid-cols-12">
+				<div class="banan1 col-start-2 h-20 w-20 bg-amber-950">
+				<div class="banan2 col-start-2 h-20 w-20 bg-blue-950">
+
+				</div>
+				</div>
+
+			</div>
+
+		</section>
 
 		<section class="">
 			<h1> Køb in med omtanke </h1>
@@ -130,6 +143,17 @@ import Button from "../components/Button.astro";
 
 		
 <script>
+// Parallax Banan Scroll JS/Motion One
+
+scroll(animate(".banan1", { y: [100, 2000], opacity: [0, 100] }), {
+		target: document.querySelector(".banan1"),
+	});
+
+scroll(animate(".banan2", { y: [200, 100], opacity: [100, 0] }), {
+		target: document.querySelector(".banan2"),
+	});
+
+// Tidslinje JS
 	const list1 = document.getElementById("li1");
 	const list2 = document.getElementById("li2");
 	const list3 = document.getElementById("li3");
@@ -246,6 +270,8 @@ import Button from "../components/Button.astro";
 	});
 
 
+
+// Stagger animation Motion JS
 import { animate, stagger, inView, scroll } from "motion";
 	inView( "#stagger" , () =>{
 		animate(

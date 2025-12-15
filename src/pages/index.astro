@@ -11,7 +11,7 @@ import Button from "../components/Button.astro";
 <MainLayout title="Titel">
 	<main class="container mx-auto p-4">
 
-		<!-- <div class="mb-250">
+		<div class="mb-250">
 			<p>Hej</p>
 		</div>
 
@@ -28,7 +28,7 @@ import Button from "../components/Button.astro";
 				<img src="/src/assets/images/cart.png" alt="" class="grayscale">
 			</div>
 
-		</section> -->
+		</section>
 
 			<section class="max-h-150 bg-blue-100">
 				<div class="flex flex-row tidslinje max-h-100">
@@ -38,12 +38,12 @@ import Button from "../components/Button.astro";
 						<li class="li3" id="li3"><h1>2010</h1></li>
 						<li class="li4" id="li4"><h1>2011</h1></li>
 						<li class="li5" id="li5"><h1>2012</h1></li>
-						<li class="li6" id="li6"><h1>2013</h1></li>
+						<!-- <li class="li6" id="li6"><h1>2013</h1></li>
 						<li class="li7" id="li7"><h1>2014</h1></li>
-						<li class="li8" id="li8"><h1>2015</h1></li>
+						<li class="li8" id="li8"><h1>2015</h1></li> -->
 					</ul>
 
-					<div class="flex flex-row li1_content">
+					<div class="flex flex-row li1_content" id="li1_content">
 						<img src="/src/assets/images/cart.png" alt="">
 						<div class="flex flex-col gap-10">
 							<h1>Begyndelsen</h1>
@@ -52,10 +52,37 @@ import Button from "../components/Button.astro";
 						</div>
 					</div>
 
-					<div class="flex flex-row inactiveBox">
+					<div class="flex flex-row li2_content inactiveBox" id="li2_content">
 						<img src="/src/assets/images/cart.png" alt="">
 						<div class="flex flex-col gap-10">
-							<h1>Begyndelsen</h1>
+							<h1>Begyndelsen 222</h1>
+							<p>Stop Spild Af Mad blev stiftet af Selina Juul i 2008 som en facebook gruppe, men voksede hurtigt til en anderkendt frivilligt og selvstændigt non-profit. 
+							Selina Juul var motiveret af hendes fortid i Moskva, hvor hun oplevede stor fødevaremangel. Da hun kom til Danmark tog hun derfor kampen op i mod madspild. </p>
+						</div>
+					</div>
+
+					<div class="flex flex-row li3_content inactiveBox" id="li3_content">
+						<img src="/src/assets/images/cart.png" alt="">
+						<div class="flex flex-col gap-10">
+							<h1>Begyndelsen 333</h1>
+							<p>Stop Spild Af Mad blev stiftet af Selina Juul i 2008 som en facebook gruppe, men voksede hurtigt til en anderkendt frivilligt og selvstændigt non-profit. 
+							Selina Juul var motiveret af hendes fortid i Moskva, hvor hun oplevede stor fødevaremangel. Da hun kom til Danmark tog hun derfor kampen op i mod madspild. </p>
+						</div>
+					</div>
+
+					<div class="flex flex-row li4_content inactiveBox" id="li4_content">
+						<img src="/src/assets/images/cart.png" alt="">
+						<div class="flex flex-col gap-10">
+							<h1>Begyndelsen 444</h1>
+							<p>Stop Spild Af Mad blev stiftet af Selina Juul i 2008 som en facebook gruppe, men voksede hurtigt til en anderkendt frivilligt og selvstændigt non-profit. 
+							Selina Juul var motiveret af hendes fortid i Moskva, hvor hun oplevede stor fødevaremangel. Da hun kom til Danmark tog hun derfor kampen op i mod madspild. </p>
+						</div>
+					</div>
+
+					<div class="flex flex-row li5_content inactiveBox" id="li5_content">
+						<img src="/src/assets/images/cart.png" alt="">
+						<div class="flex flex-col gap-10">
+							<h1>Begyndelsen 555</h1>
 							<p>Stop Spild Af Mad blev stiftet af Selina Juul i 2008 som en facebook gruppe, men voksede hurtigt til en anderkendt frivilligt og selvstændigt non-profit. 
 							Selina Juul var motiveret af hendes fortid i Moskva, hvor hun oplevede stor fødevaremangel. Da hun kom til Danmark tog hun derfor kampen op i mod madspild. </p>
 						</div>
@@ -93,6 +120,10 @@ import Button from "../components/Button.astro";
 				
 				li{
 					cursor: pointer;
+					
+					h1{
+						font-size: 5rem;
+					}
 				}
 
 			</style>
@@ -108,14 +139,112 @@ import Button from "../components/Button.astro";
 	const list7 = document.getElementById("li7");
 	const list8 = document.getElementById("li8");
 	
-	const list1box = document.getElementsByClassName("li1_content");
-	const list2box = document.getElementsByClassName("li2_content");
-	const list3box = document.getElementsByClassName("li3_content");
-	const list4box = document.getElementsByClassName("li4_content");
-	const list5box = document.getElementsByClassName("li5_content");
-	const list6box = document.getElementsByClassName("li_6content");
-	const list7box = document.getElementsByClassName("li_7content");
-	const list8box = document.getElementsByClassName("li_8content");
+	const list1box = document.getElementById("li1_content");
+	const list2box = document.getElementById("li2_content");
+	const list3box = document.getElementById("li3_content");
+	const list4box = document.getElementById("li4_content");
+	const list5box = document.getElementById("li5_content");
+	const list6box = document.getElementById("li_6content");
+	const list7box = document.getElementById("li_7content");
+	const list8box = document.getElementById("li_8content");
+
+	list1.addEventListener("click", () => {
+		list1.classList.add("activeTime");
+		list1box.classList.remove("inactiveBox");
+		// list1box.classList.add("animate-fade-down", "animate-ease-out");
+		list2.classList.remove("activeTime");
+		list2box.classList.add("inactiveBox");
+		list3.classList.remove("activeTime");
+		list3box.classList.add("inactiveBox");
+		list4.classList.remove("activeTime");
+		list4box.classList.add("inactiveBox");
+		list5.classList.remove("activeTime");
+		list5box.classList.add("inactiveBox");
+		list6.classList.remove("activeTime");
+		list6box.classList.add("inactiveBox");
+		list7.classList.remove("activeTime");
+		list7box.classList.add("inactiveBox");
+		list8.classList.remove("activeTime");
+		list8box.classList.add("inactiveBox");
+
+	});
+
+	list2.addEventListener("click", () => {
+		list2.classList.add("activeTime");
+		list2box.classList.remove("inactiveBox");
+		list1.classList.remove("activeTime");
+		list1box.classList.add("inactiveBox");
+		list3.classList.remove("activeTime");
+		list3box.classList.add("inactiveBox");
+		list4.classList.remove("activeTime");
+		list4box.classList.add("inactiveBox");
+		list5.classList.remove("activeTime");
+		list5box.classList.add("inactiveBox");
+		list6.classList.remove("activeTime");
+		list6box.classList.add("inactiveBox");
+		list7.classList.remove("activeTime");
+		list7box.classList.add("inactiveBox");
+		list8.classList.remove("activeTime");
+		list8box.classList.add("inactiveBox");
+	});
+
+	list3.addEventListener("click", () => {
+		list3.classList.add("activeTime");
+		list3box.classList.remove("inactiveBox");
+		list1.classList.remove("activeTime");
+		list1box.classList.add("inactiveBox");
+		list2.classList.remove("activeTime");
+		list2box.classList.add("inactiveBox");
+		list4.classList.remove("activeTime");
+		list4box.classList.add("inactiveBox");
+		list5.classList.remove("activeTime");
+		list5box.classList.add("inactiveBox");
+		list6.classList.remove("activeTime");
+		list6box.classList.add("inactiveBox");
+		list7.classList.remove("activeTime");
+		list7box.classList.add("inactiveBox");
+		list8.classList.remove("activeTime");
+		list8box.classList.add("inactiveBox");
+	});
+
+	list4.addEventListener("click", () => {
+		list4.classList.add("activeTime");
+		list4box.classList.remove("inactiveBox");
+		list1.classList.remove("activeTime");
+		list1box.classList.add("inactiveBox");
+		list2.classList.remove("activeTime");
+		list2box.classList.add("inactiveBox");
+		list3.classList.remove("activeTime");
+		list3box.classList.add("inactiveBox");
+		list5.classList.remove("activeTime");
+		list5box.classList.add("inactiveBox");
+		list6.classList.remove("activeTime");
+		list6box.classList.add("inactiveBox");
+		list7.classList.remove("activeTime");
+		list7box.classList.add("inactiveBox");
+		list8.classList.remove("activeTime");
+		list8box.classList.add("inactiveBox");
+	});
+
+	list5.addEventListener("click", () => {
+		list5.classList.add("activeTime");
+		list5box.classList.remove("inactiveBox");
+		list1.classList.remove("activeTime");
+		list1box.classList.add("inactiveBox");
+		list2.classList.remove("activeTime");
+		list2box.classList.add("inactiveBox");
+		list3.classList.remove("activeTime");
+		list3box.classList.add("inactiveBox");
+		list4.classList.remove("activeTime");
+		list4box.classList.add("inactiveBox");
+		list6.classList.remove("activeTime");
+		list6box.classList.add("inactiveBox");
+		list7.classList.remove("activeTime");
+		list7box.classList.add("inactiveBox");
+		list8.classList.remove("activeTime");
+		list8box.classList.add("inactiveBox");
+	});
+
 
 import { animate, stagger, inView, scroll } from "motion";
 	inView( "#stagger" , () =>{
